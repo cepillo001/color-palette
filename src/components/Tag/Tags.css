@@ -2,9 +2,19 @@
   display: flex;
   flex-direction: column;
   width: 20%;
-  border: 1px solid grey;
-  border-radius: 5px;
+  align-items: center;
+  border-radius: 10px;
   margin-right: 20px;
-  padding: 20px
+  padding: 20px;
+  transition: box-shadow 0.2s ease;
+  height: fit-content;
+}
+
+.tag-container:hover {
+  box-shadow: rgb(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tag-title {
+  margin-bottom: 10px;
 }
 

@@ -28,29 +28,33 @@ const Palette = ({ palette }) => {
     );
   }
 
+  const copyToClipboard = (value) => {
+    navigator.clipboard.writeText(value)
+  }
 
   return (
     <div className='palette-container'>
       <div className='palette'>
         <h3>{name}</h3>
-        {colors.map((color) => {
+        {colors.map((color, index) => {
           return (
             <div
-              key={color}
-              className='color'
+              key={index}
+              className={'color c${index}'}
               style={{ backgroundColor: color }}
+              onClick={() => copyToClipboard(color)}
             >
-              <span>{color}</span>
+              <div className='hex-code'>{color}</div>
             </div>
           );
         })}
       </div>
       <div className='palette-actions'>
-        <div className='fav'>
+        <div className='fav' onClick={handleFavorite}>
           {isFavorite ? (
-            <FaHeart className='fav heart' onClick={handleFavorite}/>
+            <FaHeart className='heart'/>
           ) : (
-            <FaRegHeart className='fav' onClick={handleFavorite}/>
+            <FaRegHeart/>
           )}
         </div>
         <Link className='btn-see-more' to={`/palette/${id}`}>

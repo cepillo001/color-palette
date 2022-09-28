@@ -1,8 +1,18 @@
 .favorite-container {
     width: 30%;
-    border: 1px solid grey;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 20px;
     padding: 20px;
+    transition: box-shadow 0.2s ease;
+    min-height: 370px;
+    height: fit-content;
+  }
+
+  .favorite-container:hover {
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  }
+
+  .fav-title {
+    margin-bottom: 10px;
   }
   

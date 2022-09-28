@@ -7,3 +7,11 @@ header {
     flex-direction: row;
   }
   
+  header {
+    padding: 0px;
+  }
+
+  .logo {
+    height: 150px;
+    width: auto;
+  }
