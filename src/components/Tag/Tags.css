@@ -8,10 +8,7 @@
   padding: 20px;
   transition: box-shadow 0.2s ease;
   height: fit-content;
-}
-
-.tag-container:hover {
-  box-shadow: rgb(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #e9e9e9;
 }
 
 .tag-title {
