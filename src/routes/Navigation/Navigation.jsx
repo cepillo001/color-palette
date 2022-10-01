@@ -27,7 +27,7 @@ const Navigation = () => {
                 </Link>
                 <div className="nav-links-container">
                     {currentUser ? (
-                        <Link className="nav-link" to='/paltte/create'>
+                        <Link className="nav-link" to='/palette/create'>
                             Nueva Paleta
                         </Link>
                     ) : (
