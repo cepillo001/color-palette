@@ -7,11 +7,12 @@ import TagDisplay from './TagDisplay';
 const PaletteDisplay = () => {
     const { id } = useParams();
     const { colorPalettes } = useContext(ColorPalettesContext);
-    const [palette] = colorPalettes.filter(
-        //transformo el id q era string, en numero
+    const [palette] = colorPalettes.filter(   // trae la paleta [palette] con el mismo id
+        //transformo el id q era string, en numero... cuando son iguales, trae la paleta.
         (palette) => palette.id === Number(id)
     );
 
+    //uso la paleta que traje, para mostrar sus partes al hacer clic en el boton
     return (
       <div className='palette-display-container'>
         <div className='palette-display-card'>
